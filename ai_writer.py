@@ -434,7 +434,10 @@ def write_top_gainers(gainers, all_coins, indicators=None):
 
     gainers_list = _build_gainers_list(coins_for_post)
 
-    prompt_text = f"Today's top gainers:\n\n{gainers_list}"
+    template = _pick_template(TOP_GAINERS, _used_tg)
+    template_body = _fill_template(template, featured, indicators)
+
+    prompt_text = f"Today's top gainers:\n\n{gainers_list}\n\n{template_body}"
     prompt_text = _add_humor(prompt_text, indicators)
 
     text = "🔥 Top Gainers\n\n" + prompt_text
