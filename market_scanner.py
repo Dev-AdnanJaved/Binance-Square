@@ -1,9 +1,6 @@
 import requests
 import logging
-try:
-    from bot.config import TOP_COINS_LIMIT, MIN_GAIN_PERCENT
-except ImportError:
-    from config import TOP_COINS_LIMIT, MIN_GAIN_PERCENT
+from config import TOP_COINS_LIMIT, MIN_GAIN_PERCENT
 
 logger = logging.getLogger(__name__)
 

@@ -4,18 +4,11 @@ import random
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 
-try:
-    from bot.market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview, get_watchlist_coins
-    from bot.indicators import calculate_indicators, check_breakout
-    from bot.charts import generate_chart
-    from bot.ai_writer import write_top_gainers, write_market_update, write_technical_analysis, write_altcoin_watchlist, write_breaking_signal, is_on_cooldown
-    from bot.telegram_sender import send_post
-except ImportError:
-    from market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview, get_watchlist_coins
-    from indicators import calculate_indicators, check_breakout
-    from charts import generate_chart
-    from ai_writer import write_top_gainers, write_market_update, write_technical_analysis, write_altcoin_watchlist, write_breaking_signal, is_on_cooldown
-    from telegram_sender import send_post
+from market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview, get_watchlist_coins
+from indicators import calculate_indicators, check_breakout
+from charts import generate_chart
+from ai_writer import write_top_gainers, write_market_update, write_technical_analysis, write_altcoin_watchlist, write_breaking_signal, is_on_cooldown
+from telegram_sender import send_post
 
 logger = logging.getLogger(__name__)
 
@@ -158,10 +151,7 @@ JOB_DEFS = [
 
 
 def create_scheduler():
-    try:
-        from bot.config import POSTS_PER_DAY, POST_START_HOUR, POST_END_HOUR
-    except ImportError:
-        from config import POSTS_PER_DAY, POST_START_HOUR, POST_END_HOUR
+    from config import POSTS_PER_DAY, POST_START_HOUR, POST_END_HOUR
 
     scheduler = BlockingScheduler()
     total = 0

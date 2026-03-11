@@ -67,10 +67,7 @@ STYLE_NAMES = list(STYLE_CONFIGS.keys())
 
 
 def generate_chart(symbol, interval, df=None, indicators=None):
-    try:
-        from bot.indicators import fetch_klines
-    except ImportError:
-        from indicators import fetch_klines
+    from indicators import fetch_klines
 
     if df is None:
         df = fetch_klines(symbol, interval, limit=80)

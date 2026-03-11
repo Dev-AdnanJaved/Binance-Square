@@ -1,7 +1,6 @@
 import os
 import sys
 import logging
-import time
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -16,6 +15,13 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("bot")
+
+from market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview
+from indicators import calculate_indicators
+from charts import generate_chart
+from ai_writer import write_top_gainers
+from telegram_sender import send_post
+from scheduler import create_scheduler
 
 
 def check_env():
@@ -42,19 +48,6 @@ def check_env():
 
 
 def run_startup_test():
-    try:
-        from bot.market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview
-        from bot.indicators import calculate_indicators
-        from bot.charts import generate_chart
-        from bot.ai_writer import write_top_gainers
-        from bot.telegram_sender import send_post
-    except ImportError:
-        from market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview
-        from indicators import calculate_indicators
-        from charts import generate_chart
-        from ai_writer import write_top_gainers
-        from telegram_sender import send_post
-
     logger.info("=" * 50)
     logger.info("STARTUP TEST: Generating sample post...")
     logger.info("=" * 50)
@@ -71,6 +64,8 @@ def run_startup_test():
     gainers = get_top_gainers(coins)
     logger.info(f"Found {len(gainers)} coins above +10%")
 
+    indicators = None
+    chart_path = None
     if coins:
         test_coin = coins[0]
         indicators = calculate_indicators(test_coin["symbol"], "4h")
@@ -116,10 +111,6 @@ def main():
 
     run_startup_test()
 
-    try:
-        from bot.scheduler import create_scheduler
-    except ImportError:
-        from scheduler import create_scheduler
     scheduler = create_scheduler()
 
     logger.info("Bot is running. Press Ctrl+C to stop.")
