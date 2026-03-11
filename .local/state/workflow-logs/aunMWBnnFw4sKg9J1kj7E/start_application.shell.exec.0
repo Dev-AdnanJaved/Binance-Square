@@ -1,0 +1,21 @@
+2026-03-11 16:08:34 [INFO] bot: Binance Square Content Bot Starting...
+2026-03-11 16:08:34 [INFO] bot: AI Provider: Gemini (gemini-2.0-flash)
+2026-03-11 16:08:34 [INFO] bot: All environment variables OK
+2026-03-11 16:08:34 [INFO] matplotlib.font_manager: generated new fontManager
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 46, in run_startup_test
+    from bot.market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview
+ModuleNotFoundError: No module named 'bot'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 133, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 117, in main
+    run_startup_test()
+  File "/home/runner/workspace/main.py", line 56, in run_startup_test
+    from telegram_sender import send_post
+  File "/home/runner/workspace/telegram_sender.py", line 4, in <module>
+    from telegram import Bot
+ModuleNotFoundError: No module named 'telegram'

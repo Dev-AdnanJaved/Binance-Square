@@ -1,0 +1,20 @@
+2026-03-11 16:07:56 [INFO] bot: Binance Square Content Bot Starting...
+2026-03-11 16:07:56 [INFO] bot: AI Provider: OpenRouter (llama-3.3-70b)
+2026-03-11 16:07:56 [INFO] bot: All environment variables OK
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 46, in run_startup_test
+    from bot.market_scanner import get_top_futures_coins, get_top_gainers, get_market_overview
+ModuleNotFoundError: No module named 'bot'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 133, in <module>
+    main()
+  File "/home/runner/workspace/main.py", line 117, in main
+    run_startup_test()
+  File "/home/runner/workspace/main.py", line 53, in run_startup_test
+    from indicators import calculate_indicators
+  File "/home/runner/workspace/indicators.py", line 3, in <module>
+    import ta
+ModuleNotFoundError: No module named 'ta'

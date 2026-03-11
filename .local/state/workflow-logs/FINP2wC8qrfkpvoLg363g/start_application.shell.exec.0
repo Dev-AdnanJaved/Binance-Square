@@ -1,0 +1,74 @@
+2026-03-11 16:21:24 [INFO] bot: Binance Square Content Bot Starting...
+2026-03-11 16:21:24 [INFO] bot: AI Provider: Gemini (gemini-2.0-flash)
+2026-03-11 16:21:24 [INFO] bot: All environment variables OK
+2026-03-11 16:21:24 [INFO] bot: ==================================================
+2026-03-11 16:21:24 [INFO] bot: STARTUP TEST: Generating sample post...
+2026-03-11 16:21:24 [INFO] bot: ==================================================
+2026-03-11 16:21:26 [INFO] bot: Fetched 20 top futures coins
+2026-03-11 16:21:26 [INFO] bot:   1. BTC: $70,342.4900 (-1.6%)
+2026-03-11 16:21:26 [INFO] bot:   2. ETH: $2,052.9400 (-1.5%)
+2026-03-11 16:21:26 [INFO] bot:   3. SOL: $85.7800 (-3.0%)
+2026-03-11 16:21:26 [INFO] bot:   4. XRP: $1.3822 (-3.6%)
+2026-03-11 16:21:26 [INFO] bot:   5. DOGE: $0.0926 (-7.6%)
+2026-03-11 16:21:26 [INFO] bot: Found 2 coins above +10%
+2026-03-11 16:21:26 [INFO] bot: Indicators for BTC: RSI=57.8, Trend=bullish
+2026-03-11 16:21:27 [INFO] charts: Using chart style: light_classic
+2026-03-11 16:21:27 [INFO] charts: Chart saved: /home/runner/workspace/charts/BTC_4h.png
+2026-03-11 16:21:27 [INFO] bot: Chart generated: /home/runner/workspace/charts/BTC_4h.png
+2026-03-11 16:21:28 [INFO] ai_writer: Cooldown set for PIXEL (6h)
+2026-03-11 16:21:28 [INFO] ai_writer: Cooldown set for XAI (6h)
+2026-03-11 16:21:28 [INFO] ai_writer: Using Gemini AI (model: gemini-2.0-flash)
+2026-03-11 16:21:28 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-11 16:21:28 [INFO] openai._base_client: Retrying request to /chat/completions in 0.481714 seconds
+2026-03-11 16:21:29 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-11 16:21:29 [INFO] openai._base_client: Retrying request to /chat/completions in 0.788646 seconds
+2026-03-11 16:21:30 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-11 16:21:30 [WARNING] ai_writer: AI humor pass failed, using plain template: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.142595706s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}]
+2026-03-11 16:21:31 [INFO] charts: Using chart style: light_classic
+2026-03-11 16:21:31 [INFO] charts: Chart saved: /home/runner/workspace/charts/PIXEL_4h.png
+2026-03-11 16:21:31 [INFO] bot: Chart generated for PIXEL: /home/runner/workspace/charts/PIXEL_4h.png
+2026-03-11 16:21:31 [INFO] bot: Generated post (229 chars):
+2026-03-11 16:21:31 [INFO] bot: ----------------------------------------
+2026-03-11 16:21:31 [INFO] bot: 🔥 Top Gainers
+
+Today's top gainers:
+
+1. $PIXEL: +138.6% — $0.0149
+2. $XAI: +30.3% — $0.0126
+
+Keep this on your radar — the setup is developing.
+
+What's your read on the current structure of $PIXEL?
+
+#PIXEL #XAI #TechnicalAnalysis
+2026-03-11 16:21:31 [INFO] bot: ----------------------------------------
+2026-03-11 16:21:33 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8202933166:AAFxL6cdWbDg_kgKkblktuC2mSFLbUTTR_4/sendPhoto "HTTP/1.1 200 OK"
+2026-03-11 16:21:33 [INFO] telegram_sender: Sent post with chart to Telegram
+2026-03-11 16:21:33 [INFO] bot: Startup test post sent to Telegram!
+2026-03-11 16:21:33 [INFO] bot: ==================================================
+2026-03-11 16:21:33 [INFO] bot: STARTUP TEST COMPLETE
+2026-03-11 16:21:33 [INFO] bot: ==================================================
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] scheduler:   - Top Gainers: 2 posts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] scheduler:   - Market Update: 1 posts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] scheduler:   - Technical Analysis: 2 posts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] scheduler:   - Altcoin Watchlist: 1 posts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:21:33 [INFO] scheduler:   - Breaking Signals: 2 posts
+2026-03-11 16:21:33 [INFO] scheduler: Scheduled 8 daily posts
+2026-03-11 16:21:33 [INFO] bot: Bot is running. Press Ctrl+C to stop.
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Top Gainers 08:00" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Top Gainers 14:00" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Market Update 08:05" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Technical Analysis 08:10" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Technical Analysis 14:10" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Altcoin Watchlist 08:15" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Breaking Signals 08:20" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Added job "Breaking Signals 14:20" to job store "default"
+2026-03-11 16:21:33 [INFO] apscheduler.scheduler: Scheduler started

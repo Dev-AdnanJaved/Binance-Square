@@ -1,0 +1,76 @@
+2026-03-11 16:25:00 [INFO] bot: Binance Square Content Bot Starting...
+2026-03-11 16:25:00 [INFO] bot: AI Provider: Groq (llama-3.3-70b-versatile)
+2026-03-11 16:25:00 [INFO] bot: All environment variables OK
+2026-03-11 16:25:00 [INFO] bot: ==================================================
+2026-03-11 16:25:00 [INFO] bot: STARTUP TEST: Generating sample post...
+2026-03-11 16:25:00 [INFO] bot: ==================================================
+2026-03-11 16:25:01 [INFO] bot: Fetched 20 top futures coins
+2026-03-11 16:25:01 [INFO] bot:   1. BTC: $70,400.0000 (-1.6%)
+2026-03-11 16:25:01 [INFO] bot:   2. ETH: $2,055.9200 (-1.3%)
+2026-03-11 16:25:01 [INFO] bot:   3. SOL: $85.8300 (-2.9%)
+2026-03-11 16:25:01 [INFO] bot:   4. XRP: $1.3841 (-3.4%)
+2026-03-11 16:25:01 [INFO] bot:   5. DOGE: $0.0926 (-7.5%)
+2026-03-11 16:25:01 [INFO] bot: Found 2 coins above +10%
+2026-03-11 16:25:02 [INFO] bot: Indicators for BTC: RSI=58.2, Trend=bullish
+2026-03-11 16:25:02 [INFO] charts: Using chart style: tradingview_pro
+2026-03-11 16:25:03 [INFO] charts: Chart saved: /home/runner/workspace/charts/BTC_4h.png
+2026-03-11 16:25:03 [INFO] bot: Chart generated: /home/runner/workspace/charts/BTC_4h.png
+2026-03-11 16:25:03 [INFO] ai_writer: Cooldown set for PIXEL (6h)
+2026-03-11 16:25:03 [INFO] ai_writer: Cooldown set for XAI (6h)
+2026-03-11 16:25:03 [INFO] ai_writer: Using Groq AI (model: llama-3.3-70b-versatile)
+2026-03-11 16:25:04 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 16:25:05 [INFO] charts: Using chart style: tradingview_pro
+2026-03-11 16:25:05 [INFO] charts: Chart saved: /home/runner/workspace/charts/PIXEL_4h.png
+2026-03-11 16:25:05 [INFO] bot: Chart generated for PIXEL: /home/runner/workspace/charts/PIXEL_4h.png
+2026-03-11 16:25:05 [INFO] bot: Generated post (493 chars):
+2026-03-11 16:25:05 [INFO] bot: ----------------------------------------
+2026-03-11 16:25:05 [INFO] bot: 🔥 Top Gainers
+
+📈 $PIXEL surges 142.0% to $0.0152, trend bullish with rising volume ✅
+⚠️ RSI 79.8 — overbought momentum, potential reversal risk.
+Resistance Levels
+1: 0.0171
+2: 0.0198
+Support Levels
+1: 0.0125
+2: 0.0106
+Indicators
+RSI: 79.8
+EMA20: 0.009000
+EMA50: 0.007000
+$PIXEL's significant price jump and rising volume indicate a strong bullish sentiment. The overbought RSI reading may lead to a minor correction.
+What's your take on $PIXEL's next price move?
+
+#PIXEL #XAI #Altcoins #Crypto
+2026-03-11 16:25:05 [INFO] bot: ----------------------------------------
+2026-03-11 16:25:06 [INFO] httpx: HTTP Request: POST https://api.telegram.org/bot8202933166:AAFxL6cdWbDg_kgKkblktuC2mSFLbUTTR_4/sendPhoto "HTTP/1.1 200 OK"
+2026-03-11 16:25:06 [INFO] telegram_sender: Deleted chart: /home/runner/workspace/charts/PIXEL_4h.png
+2026-03-11 16:25:06 [INFO] telegram_sender: Sent post with chart to Telegram
+2026-03-11 16:25:06 [INFO] bot: Startup test post sent to Telegram!
+2026-03-11 16:25:06 [INFO] bot: ==================================================
+2026-03-11 16:25:06 [INFO] bot: STARTUP TEST COMPLETE
+2026-03-11 16:25:06 [INFO] bot: ==================================================
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] scheduler:   - Top Gainers: 2 posts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] scheduler:   - Market Update: 1 posts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] scheduler:   - Technical Analysis: 2 posts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] scheduler:   - Altcoin Watchlist: 1 posts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-11 16:25:06 [INFO] scheduler:   - Breaking Signals: 2 posts
+2026-03-11 16:25:06 [INFO] scheduler: Scheduled 8 daily posts
+2026-03-11 16:25:06 [INFO] bot: Bot is running. Press Ctrl+C to stop.
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Top Gainers 08:00" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Top Gainers 14:00" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Market Update 08:05" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Technical Analysis 08:10" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Technical Analysis 14:10" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Altcoin Watchlist 08:15" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Breaking Signals 08:20" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Added job "Breaking Signals 14:20" to job store "default"
+2026-03-11 16:25:06 [INFO] apscheduler.scheduler: Scheduler started
