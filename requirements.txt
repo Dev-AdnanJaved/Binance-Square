@@ -1,0 +1,8 @@
+APScheduler==3.11.2
+matplotlib==3.10.8
+mplfinance==0.12.10b0
+numpy==2.4.3
+openai==2.26.0
+pandas==3.0.1
+python-dotenv==1.2.2
+requests==2.32.5
