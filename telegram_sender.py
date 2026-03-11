@@ -43,6 +43,11 @@ async def _send_message_async(text, image_path=None):
                     chat_id=chat_id,
                     text=text[1024:],
                 )
+            try:
+                os.remove(image_path)
+                logger.info(f"Deleted chart: {image_path}")
+            except Exception as e:
+                logger.warning(f"Could not delete chart {image_path}: {e}")
             logger.info(f"Sent post with chart to Telegram")
         else:
             await bot.send_message(
