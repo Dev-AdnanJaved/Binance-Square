@@ -15,6 +15,8 @@ AI_PROVIDER = os.environ.get("AI_PROVIDER", "openrouter").lower()
 MODELS = {
     "openrouter": "meta-llama/llama-3.3-70b-instruct",
     "gemini": "gemini-2.0-flash",
+    "openai": "gpt-4o-mini",
+    "groq": "llama-3.3-70b-versatile",
 }
 
 MODEL = MODELS.get(AI_PROVIDER, MODELS["openrouter"])
@@ -34,6 +36,23 @@ def _get_client():
                 api_key=api_key,
             )
             logger.info(f"Using Gemini AI (model: {MODEL})")
+        elif AI_PROVIDER == "openai":
+            api_key = os.environ.get("OPENAI_API_KEY")
+            if not api_key:
+                logger.warning("OPENAI_API_KEY not set")
+                return None
+            _client = OpenAI(api_key=api_key)
+            logger.info(f"Using OpenAI (model: {MODEL})")
+        elif AI_PROVIDER == "groq":
+            api_key = os.environ.get("GROQ_API_KEY")
+            if not api_key:
+                logger.warning("GROQ_API_KEY not set")
+                return None
+            _client = OpenAI(
+                base_url="https://api.groq.com/openai/v1",
+                api_key=api_key,
+            )
+            logger.info(f"Using Groq AI (model: {MODEL})")
         else:
             base_url = os.environ.get("AI_INTEGRATIONS_OPENROUTER_BASE_URL")
             api_key = os.environ.get("AI_INTEGRATIONS_OPENROUTER_API_KEY")

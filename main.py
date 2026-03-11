@@ -36,13 +36,20 @@ def check_env():
         sys.exit(1)
 
     provider = os.environ.get("AI_PROVIDER", "openrouter").lower()
-    if provider == "gemini":
-        if not os.environ.get("GEMINI_API_KEY"):
-            logger.warning("AI_PROVIDER=gemini but GEMINI_API_KEY not set — AI rewriting will be skipped")
+    provider_info = {
+        "gemini":    ("GEMINI_API_KEY",  "Gemini (gemini-2.0-flash)"),
+        "openai":    ("OPENAI_API_KEY",  "OpenAI (gpt-4o-mini)"),
+        "groq":      ("GROQ_API_KEY",    "Groq (llama-3.3-70b-versatile)"),
+        "openrouter":("AI_INTEGRATIONS_OPENROUTER_API_KEY", "OpenRouter (llama-3.3-70b)"),
+    }
+    if provider in provider_info:
+        key_name, label = provider_info[provider]
+        if not os.environ.get(key_name):
+            logger.warning(f"AI_PROVIDER={provider} but {key_name} not set — AI rewriting will be skipped")
         else:
-            logger.info(f"AI Provider: Gemini (gemini-2.0-flash)")
+            logger.info(f"AI Provider: {label}")
     else:
-        logger.info(f"AI Provider: OpenRouter (llama-3.3-70b)")
+        logger.warning(f"Unknown AI_PROVIDER={provider}, AI rewriting will be skipped")
 
     logger.info("All environment variables OK")
 
